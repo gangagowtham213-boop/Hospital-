@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #e6f2ff;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            width: 350px;
+            margin: auto;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 5px;
+        }
+        button {
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+        }
+        table {
+            margin: auto;
+            margin-top: 20px;
+            width: 80%;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🏥 Hospital Management System</h2>
+
+    <input type="text" id="name" placeholder="Enter Name"><br>
+    <input type="number" id="age" placeholder="Enter Age"><br>
+    <input type="text" id="gender" placeholder="Enter Gender"><br>
+    <input type="text" id="disease" placeholder="Enter Disease"><br>
+
+    <button onclick="addPatient()">Add Patient</button>
+</div>
+
+<h2>Patient Records</h2>
+
+<table border="1" id="table">
+<tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Disease</th>
+</tr>
+</table>
+
+<script>
+function addPatient() {
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var gender = document.getElementById("gender").value;
+    var disease = document.getElementById("disease").value;
+
+    var table = document.getElementById("table");
+    var row = table.insertRow();
+
+    row.insertCell(0).innerHTML = name;
+    row.insertCell(1).innerHTML = age;
+    row.insertCell(2).innerHTML = gender;
+    row.insertCell(3).innerHTML = disease;
+}
+</script>
+
+</body>
+</html>
