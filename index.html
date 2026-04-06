@@ -59,23 +59,3 @@
     <th>Disease</th>
 </tr>
 </table>
-
-<script>
-function addPatient() {
-    var name = document.getElementById("name").value;
-    var age = document.getElementById("age").value;
-    var gender = document.getElementById("gender").value;
-    var disease = document.getElementById("disease").value;
-
-    var table = document.getElementById("table");
-    var row = table.insertRow();
-
-    row.insertCell(0).innerHTML = name;
-    row.insertCell(1).innerHTML = age;
-    row.insertCell(2).innerHTML = gender;
-    row.insertCell(3).innerHTML = disease;
-}
-</script>
-
-</body>
-</html>
